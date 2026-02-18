@@ -56,6 +56,10 @@ vi.mock('fs', async (importOriginal) => {
       isDirectory: vi.fn().mockReturnValue(true),
     }),
     realpathSync: vi.fn((path) => path),
+    promises: {
+      ...actual.promises,
+      mkdir: vi.fn().mockResolvedValue(undefined),
+    },
   };
 });
 
@@ -250,6 +254,12 @@ describe('Server Config (config.ts)', () => {
     sessionId: SESSION_ID,
     model: MODEL,
     usageStatisticsEnabled: false,
+    sisyphusMode: {
+      enabled: false,
+      idleTimeout: 1,
+      prompt: 'continue workflow',
+    },
+    confuciusMode: { intervalHours: 8 },
   };
 
   beforeEach(() => {
@@ -1650,6 +1660,12 @@ describe('BaseLlmClient Lifecycle', () => {
     sessionId: SESSION_ID,
     model: MODEL,
     usageStatisticsEnabled: false,
+    sisyphusMode: {
+      enabled: false,
+      idleTimeout: 1,
+      prompt: 'continue workflow',
+    },
+    confuciusMode: { intervalHours: 8 },
   };
 
   it('should throw an error if getBaseLlmClient is called before refreshAuth', () => {
@@ -1705,6 +1721,12 @@ describe('Generation Config Merging (HACK)', () => {
     sessionId: SESSION_ID,
     model: MODEL,
     usageStatisticsEnabled: false,
+    sisyphusMode: {
+      enabled: false,
+      idleTimeout: 1,
+      prompt: 'continue workflow',
+    },
+    confuciusMode: { intervalHours: 8 },
   };
 
   it('should merge default aliases when user provides only overrides', () => {
