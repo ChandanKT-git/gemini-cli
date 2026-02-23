@@ -853,12 +853,6 @@ export function renderConfuciusInstructions(enabled?: boolean): string {
 `.trim();
 }
 
-export const renderConfuciusSnippet = (intervalHours: number) => `
---- Confucius Engine ---
-You are currently running with the Confucius reflection engine enabled.\nEvery ${intervalHours} hours, you should pause execution to reflect on the progress made, evaluate your strategy, and write a summary to the user.
-------------------------
-`;
-
 export function getArchiveIndexPrompt(): string {
   return `
 You are a specialized system component responsible for analyzing and summarizing chat history before it is archived to disk.
