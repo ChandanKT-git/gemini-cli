@@ -167,9 +167,9 @@ export function renderLongRunningAgent(options?: SisyphusModeOptions): string {
 The following is an automated, real-time log of your recent factual discoveries, successful paths, and failures.
 Use this to avoid repeating mistakes or losing track of your immediate context. **DO NOT ignore this.**
 
-<short_term_memory>
+--- Short-Term Memory ---
 ${options.hippocampusContent.trim()}
-</short_term_memory>`;
+-------------------------`;
   }
 
   return prompt;

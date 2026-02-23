@@ -459,9 +459,9 @@ export class ChatCompressionService {
           const archiveSummaryMsg = `IMPORTANT: To save context window space, this segment of chat history has been archived to a JSON file.
 The archived history can be found at: ${relativePath}
 
-<archive_summary>
+--- Archive Summary ---
 ${item.summary}
-</archive_summary>
+-----------------------
 
 If you need to reference specific details from this segment, use the \`read_file\` tool to read the JSON file.`;
 

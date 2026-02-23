@@ -838,7 +838,7 @@ Do not wait for a reflection cycle if the information is critical for future tur
         request = [
           ...parts,
           {
-            text: `<bicameral_voice>${additionalContext}</bicameral_voice>`,
+            text: `\n\n--- Proactive Knowledge Alignment ---\n${additionalContext}\n-------------------------------------`,
           },
         ];
       }
