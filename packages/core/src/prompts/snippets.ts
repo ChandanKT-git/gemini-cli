@@ -844,15 +844,6 @@ As an autonomous agent, your goal is to evolve your long-term memory into an eff
 Your reflection should be thorough, honest, and efficient. Once complete, you will return control to the user (or resume your mission if in Sisyphus mode).
 `.trim();
 
-export function renderConfuciusInstructions(enabled?: boolean): string {
-  if (!enabled) return '';
-  return `
-# Confucius Mode Active
-- You are currently performing a scheduled self-reflection (Confucius Mode).
-- Focus on knowledge solidification and environment cleanup as per the CONFUCIUS_PROMPT.
-`.trim();
-}
-
 export function getArchiveIndexPrompt(): string {
   return `
 You are a specialized system component responsible for analyzing and summarizing chat history before it is archived to disk.
